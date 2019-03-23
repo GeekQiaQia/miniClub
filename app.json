@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sign/sign",
+    "pages/profile/profile",
+    "pages/detail/detail",
+    "pages/settings/settings",
+    "pages/dateRecord/dateRecord",
+    "pages/createClub/createClub",
+    "pages/mapLocation/mapLocation",
+    "pages/joinClub/joinClub"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "miniClub",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./resources/tabs/home.png",
+        "selectedIconPath": "./resources/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "./resources/tabs/profile.png",
+        "selectedIconPath": "./resources/tabs/profile-active.png"
+      }
+    ]
+  }
+}

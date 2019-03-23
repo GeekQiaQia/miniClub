@@ -1,0 +1,48 @@
+<!--pages/createClub/createClub.wxml-->
+<view class="basicInfo">
+    <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+    </view>
+
+    <view class="nickName">
+        <open-data type="userNickName"></open-data>
+    </view>
+</view>
+<view>
+    <form bindsubmit="subClubInfo">
+        <view class="clubInfo">
+            <text>主题：</text>
+            <input  name="theme" id="theme" value="{{theme}}" bindinput="bindInputChange" type='text' focus placeholder="请输入主题"></input>
+        </view>
+        <view class="clubInfo" >
+            <text>时间：</text>
+            <picker mode="date" value="{{date}}" start="2019-01-01" end="2049-01-01" bindchange="bindDateChange">
+                <view class="picker">
+                     {{date}}
+                </view>
+            </picker>
+            <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+                <view class="picker">
+                    <text>{{day}}</text><text>{{time}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="clubInfo">
+            <text>地点：</text>
+            <input  name="location"  value="{{address}}" type='text' bindfocus="selectLocation" placeholder="请选择地点" readonly></input>
+        </view>
+        <view class="clubInfo">
+            <text>人数：</text>
+            <input  name="people" id="people" type='number' value="" bindinput="bindInputChange" placeholder="请输入人数"></input>
+        </view>
+        <view class="clubInfo">
+            <text>费用：</text>
+            <input  name="cost"  id="cost" type='digit' value="" bindinput="bindInputChange" placeholder="请输入预算费用 元/人"></input>
+        </view>
+        <view class="clubDes">
+            <text>简介：</text>
+            <textarea name="describe" id="describe"  value="" bindinput="bindInputChange" placeholder="请对本次活动进行简述"></textarea>
+        </view>
+        <button type="primary" form-type="submit" > 创建完成</button>
+    </form>
+</view>

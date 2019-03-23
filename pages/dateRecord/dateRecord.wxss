@@ -1,0 +1,38 @@
+/* pages/dateRecord/dateRecord.wxss */
+
+.recordArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    width:100vw;
+    height:100vh;
+}
+.recordItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width:100vw;
+    margin: 20rpx;
+}
+.recordImg{
+    width:36vw;
+    height:18vh;
+    margin-right: 4vw;
+}
+image{
+    width:35vw;
+    height:17vh;
+}
+.theme{
+    font-size:32rpx;
+}
+.recordInfo{
+    font-size:28rpx;
+}
+.recordDes{
+    background-color: gainsboro;
+    width:40vw;
+}

@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="btnContainer">
+     <button class="clubBtn"  class="{{clubBtnSelected==='joinClub'?'clubChecked':''}}" data-type="joinClub" bindtap='switchTabContent'>加入俱乐部</button>
+     <button class="clubBtn" class="{{clubBtnSelected==='myClub'?'clubChecked':''}}"   data-type="myClub" bindtap='switchTabContent'>我的俱乐部</button>
+  </view>
+
+    <view class="divider"></view>
+
+    <scroll-view  hidden="{{clubBtnSelected==='myClub'}}" class="clubContainer" scroll-y  style="height: 85vh;">
+
+     <view   wx:for="{{clubInfo}}" wx:key="index"  data-id="{{item._id}}" id="{{item._id}}" wx:for-index="{{item.id}}" bindtap="bindJoinClub" class="clubItem">
+      <view class="clubImg">
+        <image src="{{img}}"></image>
+      </view>
+      <view   class="clubInfo">
+        <view class="theme"><text>#{{item.theme}}#</text></view>
+        <view class="dateTime"><text>{{item.date}}</text><text>{{item.day}}</text><text>{{item.time}}</text></view>
+        <view class="location"><text>{{item.location}}</text></view>
+        <view class="recordDes"><text>{{item.peopleDes}}</text></view>
+      </view>
+    </view>
+
+    </scroll-view>
+
+    <view  class="myClub" hidden="{{createdClubNo || clubBtnSelected==='joinClub'}}">
+      <view class="tipContainer" >
+        <view class="tips main"><text>还咩有俱乐部</text></view>
+        <view class="tips second"><text>点击按钮，创建俱乐部</text></view>
+        <button class="tips btn" bindtap='createClub'>创建俱乐部</button>
+      </view>
+    </view>
+
+    <scroll-view  wx:if="{{createdClubNo && clubBtnSelected==='myClub'}}" class="clubContainer" scroll-y  style="height: 85vh;">
+        <view   wx:for="{{myClubInfo}}" wx:key="index"  data-id="{{item._id}}" id="{{item._id}}" wx:for-index="{{item.id}}" bindtap="bindJoinClub" class="clubItem">
+            <view class="clubImg">
+                <image src="{{img}}"></image>
+            </view>
+            <view   class="clubInfo">
+                <view class="theme"><text>#{{item.theme}}#</text></view>
+                <view class="dateTime"><text>{{item.date}}</text><text>{{item.day}}</text><text>{{item.time}}</text></view>
+                <view class="location"><text>{{item.location}}</text></view>
+                <view class="recordDes"><text>{{item.peopleDes}}</text></view>
+            </view>
+        </view>
+    </scroll-view>
+
+    <button  wx:if="{{createdClubNo && clubBtnSelected==='myClub'}}" type="primary" bindtap='createClub'>创建俱乐部</button>
+
+</view>

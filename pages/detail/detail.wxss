@@ -1,0 +1,104 @@
+/* pages/detail/detail.wxss */
+
+.basicInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400rpx;
+    flex-direction: column;
+    background-color: #3a4861;
+
+}
+
+.basicInfo .avatar {
+    width: 13vh;
+    overflow: hidden;
+    display: block;
+    height: 13vh;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10rpx #777f92;
+    border: 1rpx solid #fff;
+    /*margin-top:-20rpx;*/
+}
+
+.basicInfo .nickName{
+    display: block;
+    margin:2vh;
+    color: white;
+}
+.signature{
+    font-size:28rpx;
+    color:white;
+}
+.detailInfo {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width:100vw;
+  height:20vh;
+  flex-wrap: wrap;
+    /*border: 1px solid red;*/
+}
+.infoTitle{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    border-bottom:5rpx solid grey;
+}
+.detailInfo .infoItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    width:45vw;
+    height:7vh;
+    /*border: 1px solid red;*/
+}
+
+.creditRecord{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width:100vw;
+    height:20vh;
+    flex-wrap: wrap;
+    /*border: 1px solid red;*/
+}
+
+.creditRecord .recordArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100vw;
+    height:15vh;
+
+}
+.recordArea .pie{
+    width:10vh;
+    height:10vh;
+    border-radius: 5vh;
+    /*border:1px solid red;*/
+    background-color: blanchedalmond;
+}
+.recordArea .list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.comment{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width:100vw;
+    height:20vh;
+    flex-wrap: wrap;
+    /*border: 1px solid red;*/
+
+}

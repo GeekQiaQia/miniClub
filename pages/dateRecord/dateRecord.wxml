@@ -1,0 +1,16 @@
+<!--pages/dateRecord/dateRecord.wxml-->
+
+  <scroll-view  class="recordArea">
+    <view   wx:for="{{recordInfo}}" wx:key="index" wx:for-index="idx" class="recordItem">
+      <view class="recordImg">
+        <image src="../../resources/mapTip.png"></image>
+      </view>
+      <view   class="recordInfo">
+        <view class="theme"><text>#{{item.theme}}#</text></view>
+        <view><text>{{item.time}}</text><text>{{item.date}}</text></view>
+        <view><text>{{item.location}}</text></view>
+        <view class="recordDes"><text>{{item.peopleDes}}</text></view>
+      </view>
+    </view>
+
+  </scroll-view>

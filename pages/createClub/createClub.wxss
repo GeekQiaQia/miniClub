@@ -1,0 +1,72 @@
+/* pages/createClub/createClub.wxss */
+
+.basicInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 270rpx;
+    background-color: #3a4861;
+
+}
+
+.basicInfo .avatar {
+    width: 180rpx;
+    overflow: hidden;
+    display: block;
+    height: 180rpx;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10rpx #777f92;
+    border: 1rpx solid #fff;
+    margin-top:-20rpx;
+    margin-left: 2vw;
+}
+
+.basicInfo .nickName{
+    display: block;
+    color: white;
+    margin: 2vw;
+}
+.clubInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+    width:100vw;
+    margin:2vh;
+
+}
+.clubDes{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-left: 4vw;
+}
+textarea{
+    border: 1px solid grey;
+    border-radius: 21rpx;
+    height:89px;
+}
+input {
+    /*border: 1px solid grey;*/
+    border-radius: 21rpx;
+    width:80vw;
+
+}
+button{
+    width:38vw;
+    height:7vh;
+    /*border:1px solid;*/
+    border-radius:10vw;
+    /*background-color:green;*/
+    margin-top:2vh;
+    /*padding-bottom:9vh;*/
+
+
+}
+picker{
+    margin-left:2vw;
+}

@@ -1,0 +1,122 @@
+/* pages/joinClub/joinClub.wxss */
+
+.joinClub{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    height: 100%;
+}
+.joinClubInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 47vh;
+}
+.infoHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height:20vh;
+}
+.infoHeader .clubImg{
+    width:36vw;
+    height:18vh;
+    margin-right: 4vw;
+    margin-left:8vw;
+}
+image{
+    width:35vw;
+    height:17vh;
+}
+
+.infoHeader .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.infoHeader .title .theme{
+
+ }
+.infoHeader .title .describe{
+    font-size: 28rpx;
+    margin: 2vh;
+}
+
+.infoBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:100%;
+}
+.infoBody .infoItem{
+    margin: 1vh;
+    margin-left:8vw;
+}
+.joinClubMember{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height:43vh;
+}
+.joinClubMember .joinInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width:100vw;
+}
+.joinClubMember .clubMember{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+
+}
+.joinClubMember .clubMember .memberItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width:100vw;
+    height:auto;
+    border-bottom: 2rpx solid grey ;
+}
+.joinClubMember .clubMember .memberItem .memberDes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.joinClubMember .clubMember .memberItem .memberInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size:28rpx;
+    margin:13rpx;
+
+}
+.joinInfo .member{
+    width:55vw;
+    margin-left:8vw;
+
+}
+.divider {
+    height:2rpx;
+    box-shadow:inset 0 6rpx 2rpx grey;
+    width:100vw;
+    margin-top:1vh;
+
+}

@@ -1,0 +1,7 @@
+{ "usingComponents": { "datepicker-plus": "/datepicker-plus/index" },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "创建俱乐部",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

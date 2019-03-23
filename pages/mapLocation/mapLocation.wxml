@@ -1,0 +1,31 @@
+<!--pages/mapLocation/mapLocation.wxml-->
+<view class="page-body">
+  <view class="searchInput">
+    <button
+           bindtap="searchLoc"
+           type="primary"
+    >
+      搜索地点
+      </button>
+  </view>
+
+  <view class="mapSection">
+    <map
+      id="myMap"
+      style="width: 100%; height: 300px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      subkey="EXUBZ-FEC65-5PIIL-QTNCW-E44QQ-F5BJ5"
+      covers="{{covers}}"
+      show-location
+      show-compass
+    ></map>
+  </view>
+
+  <view class="btnArea">
+    <text>{{chooseAddress}}</text>
+    <button bindtap="backToCreateClub" class="page-body-button" type="warn">确认</button>
+
+  </view>
+</view>

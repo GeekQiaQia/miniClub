@@ -1,0 +1,25 @@
+<!--sign/sign.wxml-->
+
+  <!-- <image src="../resources/logoArea.png"></image> -->
+<view class="form">
+  <form    bindsubmit='doLogin'>
+     <view class="input-box">
+      <text class=" iconfont icon-login"/>
+      <input type='text'
+             id="username"
+             bindinput="valueHandler"
+             value="{{username}}"
+             auto-focus placeholder='请输入您的登陆账户'/>
+     </view>
+
+     <view class="input-box">
+     <text class=' iconfont icon-password'/>
+      <input type='password'
+             id="password"
+             value="{{password}}"
+             bindinput="valueHandler"  />
+     </view>
+    
+     <button  class="loginBtn" form-type='submit'>登陆</button>
+  </form>
+</view>

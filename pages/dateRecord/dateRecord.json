@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "赴约记录",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  
+}

@@ -1,0 +1,47 @@
+<!--pages/joinClub/joinClub.wxml-->
+<view class="joinClub">
+    <view class="joinClubInfo">
+        <view class="infoHeader">
+            <view class="clubImg">
+                <image src="{{img}}"></image>
+            </view>
+            <view class="title">
+                <view class="theme"><text>#{{clubInfo.theme}}#</text></view>
+                <view class="describe"><text>{{clubInfo.describe}}</text></view>
+            </view>
+        </view>
+
+        <view class="infoBody">
+            <view class="infoItem">
+                <text>时间:</text>
+                <text>{{clubInfo.date}}</text>
+                <text>{{clubInfo.day}}</text>
+                <text>{{clubInfo.time}}</text>
+            </view>
+            <view class="infoItem"><text>地点:</text><text>{{clubInfo.location}}</text></view>
+            <view class="infoItem"><text>人数:</text><text>{{clubInfo.people}}</text></view>
+            <view class="infoItem"><text>费用:</text><text>{{clubInfo.cost}}</text></view>
+        </view>
+    </view>
+    <view class="joinClubMember">
+        <view class="joinInfo">
+            <view class="member"><text>报名人数{{joinPeople}}/{{clubInfo.people}}</text></view>
+            <button size="mini"  open-type="getUserInfo" type="primary" bindtap="bindJoinClub">我要加入</button>
+        </view>
+
+        <view class="divider"></view>
+
+       <scroll-view class="clubMember">
+           <view  wx:for="{{joinMember}}" wx:key="index" wx:for-index="idx" class="memberItem" >
+               <image src="{{item.avatarUrl}}"></image>
+               <view class="memberDes">
+                   <view>{{item.nickName}} <text>{{item.gender}}</text></view>
+                   <view  class="memberInfo">
+                       <view>{{item.signature}}</view>
+                   </view>
+               </view>
+           </view>
+       </scroll-view>
+
+    </view>
+</view>
