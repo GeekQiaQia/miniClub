@@ -41,7 +41,10 @@
         <text>信用统计</text>
     </view>
     <view class="recordArea">
-        <view class="pie"></view>
+       <view class="pieContainer">
+  <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" bind:init="echartInit"></ec-canvas>
+</view>
+
         <view class="list">
             <view><text>赴约：</text><text>{{dateRecord.appoint}}次</text></view>
             <view><text>爽约：</text><text>{{dateRecord.stand}}次</text></view>

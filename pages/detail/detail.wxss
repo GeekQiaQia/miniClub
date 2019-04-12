@@ -82,7 +82,7 @@
     height:10vh;
     border-radius: 5vh;
     /*border:1px solid red;*/
-    background-color: blanchedalmond;
+    /*background-color: blanchedalmond;*/
 }
 .recordArea .list{
     display: flex;
@@ -101,4 +101,8 @@
     flex-wrap: wrap;
     /*border: 1px solid red;*/
 
+}
+ec-canvas {
+    width: 100%;
+    height: 100%;
 }
