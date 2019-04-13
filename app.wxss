@@ -9,11 +9,11 @@ color: transparent;
 
 .pieContainer {
   position:absolute;
-  top:350px;
+  top:60vh;
   bottom:0;
   left:18px;
   right:0;
-  width:100px;
+  width:50vw;
   height:100px;
   display:flex;
   flex-direction:column;

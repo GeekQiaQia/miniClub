@@ -2,10 +2,10 @@
   "usingComponents": {
     "ec-canvas": "../../packages/ec-canvas/ec-canvas"
   },
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "我的资料",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light"
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "我的资料",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 
 }

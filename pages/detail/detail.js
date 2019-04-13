@@ -2,42 +2,36 @@
 import * as echarts from '../../packages/ec-canvas/echarts';
 
 const app = getApp();
-function initChart(canvas, width, height) {
+function initChart(canvas, width, height,recordData) {
     const chart = echarts.init(canvas, null, {
         width: width,
         height: height
     });
+
     canvas.setChart(chart);
 
     var option = {
         backgroundColor: "#ffffff",
-        color: ["#37A2DA", "#32C5E9", "#67E0E3", "#91F2DE", "#FFDB5C", "#FF9F7F"],
+        color: ["#14DA12","#DA0D07","#FFDB5C" ],
         series: [{
             label: {
                 normal: {
                     fontSize: 14
                 }
             },
+            labelLine:{
+                normal:{
+                    length:5,  // 改变标示线的长度
+                    lineStyle: {
+                        color: "black"  // 改变标示线的颜色
+                    }
+                },
+            },
+            name:'赴约记录',
             type: 'pie',
             center: ['50%', '50%'],
-            radius: [0, '30%'],
-            data: [{
-                value: 55,
-                name: '北京'
-            }, {
-                value: 20,
-                name: '武汉'
-            }, {
-                value: 10,
-                name: '杭州'
-            }, {
-                value: 20,
-                name: '广州'
-            }, {
-                value: 38,
-                name: '上海'
-            },
-            ],
+            radius: [0, '60%'],
+            data:[],
             itemStyle: {
                 emphasis: {
                     shadowBlur: 10,
@@ -48,6 +42,7 @@ function initChart(canvas, width, height) {
         }]
     };
 
+    option.series[0].data=recordData;
     chart.setOption(option);
     return chart;
 }
@@ -63,11 +58,24 @@ Page({
       comment:{name:'科比',content:'打篮球我谁都不服'},
       dateRecord:{appoint:'9',stand:'1'},
       ec: {
+      },
+      recordData:[{
+          value: 9,
+          name: '赴约'
+      }, {
+          value: 1,
+          name: '爽约'
+      },{
+          value: 2,
+          name: '取消'
       }
-
+      ]
   },
+
     echartInit(e) {
-        initChart(e.detail.canvas, 100, 100);
+       console.log(e);
+       let recordData=e.target.dataset.record;
+        initChart(e.detail.canvas, e.detail.width, e.detail.height,recordData);
     },
 
   /**
